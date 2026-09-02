@@ -75,10 +75,16 @@ WSGI_APPLICATION = "ddr_portal.wsgi.application"
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    'default': {
+        'ENGINE': 'mssql',
+        'NAME': 'DDR_Portal',
+        'HOST': 'RIYA-LAPTOP',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'Trusted_Connection': 'yes',
+        },
+    },
 }
 
 
